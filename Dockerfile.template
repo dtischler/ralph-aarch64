@@ -2,7 +2,7 @@ FROM balenalib/%%BALENA_MACHINE_NAME%%
 
 WORKDIR /usr/app
 
-RUN install_packages boinc-client
+RUN install_packages boinc-client boinctui htop
   
 COPY *.xml ./
 
