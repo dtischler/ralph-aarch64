@@ -6,6 +6,6 @@ RUN install_packages boinc-client boinctui htop
   
 COPY *.xml ./
 
-COPY remote_hosts.cfg /var/lib/boinc/remote_hosts.cfg
+COPY gui_rpc_auth.cfg ./
 
-CMD boinc
+CMD ["boinc","--allow_remote_gui_rpc"]
